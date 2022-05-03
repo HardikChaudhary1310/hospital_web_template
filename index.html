@@ -20,6 +20,107 @@
     <!-- custom css file link  -->
     <link rel="stylesheet" href="style.css">
 
+    <style>
+      
+        .topnav {
+          overflow: hidden;
+          background-color: #e9e9e9;
+          box-sizing: border-box;
+          border-radius: 10px solid black;
+          margin-bottom: 30px;
+          margin-top: 40px;
+        }
+        
+        .topnav a {
+          float: right;
+          display: block;
+          color: black;
+          text-align: center;
+          padding: 19px 15px;
+          text-decoration: none;
+          font-size: 17px;
+        }
+        
+        .topnav a:hover {
+          background-color: #ddd;
+          color: black;
+        }
+        
+        .topnav a.active {
+          background-color: #2196F3;
+          color: white;
+        }
+        
+        .topnav .search-container {
+          float: left;
+          padding: 10px 15px;
+        }
+        
+        .topnav input[type=text] {
+          padding: 6px;
+          margin-top: 8px;
+          font-size: 17px;
+          border: none;
+        }
+        
+        .topnav .search-container button {
+          float: right;
+          padding: 6px ;
+          margin-top: 8px;
+          margin-right: 16px;
+          background: white;
+          font-size: 17px;
+          border: none;
+          cursor: pointer;
+        }
+        
+        .topnav .search-container button:hover {
+          /* background: #ccc; */
+        }
+        
+        @media screen and (max-width: 600px) {
+          .topnav .search-container {
+            float: none;
+          }
+          .topnav a, .topnav input[type=text], .topnav .search-container button {
+            float: left;
+            display: block;
+            text-align: left;
+            width: 100%;
+            margin: 5px 10px 3px 5px ;
+            padding: 14px 10px;
+            word-spacing: 2px
+          }
+          .topnav input[type=text] {
+            border: 1px solid #ccc;  
+          }
+        }
+
+
+
+/* Create four equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 55%;
+  padding: 21px;
+  height: 300px; /* Should be removed. Only for demonstration */
+  /* align-content: space-between; */
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - makes the four columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+  }
+}
+</style>
 </head>
 <body>
     
@@ -27,14 +128,14 @@
 <!-- header section starts  -->
 <header>
 <div class="container">
-    <a href="#" class="logo"><span>H</span>ealth<span>C</span>are.</a>
+    <a href="#" class="logo"><span>L</span>o<span>g</span>o</a>
     <nav class="nav">
         <ul>
-            <li><a href="#home">home</a></li>
-            <li><a href="#about">about</a></li>
+            <li><a href="#home">Help</a></li>
+            <li><a href="#about">About us</a></li>
             <li><a href="#facility">facility</a></li>
             <li><a href="#review">review</a></li>
-            <li><a href="#contact">contact</a></li>
+            <li style="background-color: lightblue; color: whitesmoke; box-sizing: border-box;"><a href="#contact">Sign In/Sign Up</a></li>
             <li><a href="#post">post</a></li>
         </ul>
     </nav>
@@ -52,25 +153,44 @@
     <div class="row min-vh-100 align-items-center text-center text-md-left">
 
         <div class="col-md-6 pr-md-5" data-aos="zoom-in">
-            <img src="images/images1.png" width="100%" alt="">
+            <img src="images/20501097-group-of-indian-medical-doctors-male-and-female-standing-isolated-on-white-background-.webp" width="100%" alt="">
         </div>
 
         <div class="col-md-6 pl-md-5 content" data-aos="fade-left">
-            <h1><span>stay</span> safe, <span>stay</span> Healthy.</h1>
-            <h3>caring for you.</h3>
+            <h1><span>Find</span>local<span>Doctors</span></h1>
+            <h4 style="font-weight: bold;">who take your insurance.</h4>
             <a href="#"><button class="button">Learn More</button></a>
         </div>
     </div>
+
+  
+<div class="topnav">
+    <div class="search-container">
+        <form action="/action_page.php">
+          <button type="submit"><i class="fa fa-search"></i></button>
+          <input type="text" placeholder="Condition,Procedure,Doctor..." name="search">
+        </form>
+      </div>
+    <!-- <a class="active" href="#home">Your Location</a> -->
+    <a class="active" href="#home"><i class="fa fa-map">Your Location</i></a>
+    <a class="active" href="#home"><i class="fa fa-location-arrow">Locate Me</i></a>
+    <a class="active" href="#home"><i class="fa fa-calendar">Today</i></a>
+    <!-- <button type="submit"><i class="fa fa-search"></i></button> -->
+    
+  </div>
+    
 </div>
 </section>
 <!-- home section ends -->
 
 
+
 <!-- about section start  -->
-<section class="about" id="about">
+<!-- <section class="about" id="about">
 <div class="container">
     <div class="row min-vh-100 align-items-center">
-        <div class="col-md-6 content" data-aos="fade-right">
+        <div style="display: flex; text-align: center;font-size: medium;font-weight: bold;justify-content: center;">hello</div>
+        <div class="col-md-12 content" data-aos="fade-left">
 
             <div class="box">
                 <h3> <i class="fas fa-ambulance"></i> ambulance services </h3>
@@ -91,10 +211,45 @@
 
         <div class="col-md-6 d-none d-md-block" data-aos="fade-left">
             <img src="images/images2.jpg" width="100%" alt="">
-        </div>
-    </div>
+        </div> 
+     </div>
 </div>
-</section>
+</section> -->
+
+<section class="facility" id="facility">
+
+<div class="container">
+    <h1 class="heading"><span>'</span> <b>Top-searched specialties </b><span>'</span></h1>
+    <div class="box-container">
+    
+        <div class="box" data-aos="zoom-in">
+            <a href="images/critical.png" title="Our Team">
+                <img src="images/critical.png" alt="">
+                <p style="font-weight: bold;color: black;">Critical Care</p>
+            </a>
+        </div>
+    
+        <div class="box" data-aos="zoom-in">
+            <a href="images/prima.png" title="Our Lab">
+                <img src="images/prima.png" alt="">
+                <p style="font-weight: bold;color: black;">Priamry Care</p>
+            </a>
+        </div>
+    
+        <div class="box" data-aos="zoom-in">
+            <a href="images/ortho.jpg" title="Emergency Rooms">
+                <img src="images/ortho.jpg" alt="">
+                <p style="font-weight: bold;color: black;">Orthopedics</p>
+            </a>
+        </div>
+    
+        <div class="box" data-aos="zoom-in">
+            <a href="images/neuro.png" title="Expert Doctors">
+                <img src="images/neuro.png" alt="">
+                <p style="font-weight: bold;color: black;">Neuro Surgen</p>
+            </a>
+        </div>
+    </section>
 <!-- about section ends -->
 
 
@@ -108,54 +263,63 @@
     <div class="box" data-aos="zoom-in">
         <a href="images/images01.jpg" title="Our Team">
             <img src="images/images01.jpg" alt="">
+            <p style="font-weight: bold;color: black;">Critical Care</p>
         </a>
     </div>
 
     <div class="box" data-aos="zoom-in">
         <a href="images/images02.jpg" title="Our Lab">
             <img src="images/images02.jpg" alt="">
+            <p style="font-weight: bold;color: black;">Critical Care</p>
         </a>
     </div>
 
     <div class="box" data-aos="zoom-in">
         <a href="images/images03.jpg" title="Emergency Rooms">
             <img src="images/images03.jpg" alt="">
+            <p style="font-weight: bold;color: black;">Critical Care</p>
         </a>
     </div>
 
     <div class="box" data-aos="zoom-in">
         <a href="images/images04.jpg" title="Expert Doctors">
             <img src="images/images04.jpg" alt="">
+            <p style="font-weight: bold;color: black;">Critical Care</p>
         </a>
     </div>
 
     <div class="box" data-aos="zoom-in">
         <a href="images/images01.jpg" title="expert doctors">
             <img src="images/images01.jpg" alt="">
+            <p style="font-weight: bold;color: black;">Critical Care</p>
         </a>
     </div>
 
     <div class="box" data-aos="zoom-in">
         <a href="images/images02.jpg" title="emergency rooms">
             <img src="images/images02.jpg" alt="">
+            <p style="font-weight: bold;color: black;">Critical Care</p>
         </a>
     </div>
 
     <div class="box" data-aos="zoom-in">
         <a href="images/images03.jpg" title="expert doctors">
             <img src="images/images03.jpg" alt="">
+            <p style="font-weight: bold;color: black;">Critical Care</p>
         </a>
     </div>
 
     <div class="box" data-aos="zoom-in">
         <a href="images/images04.jpg" title="emergency rooms">
             <img src="images/images04.jpg" alt="">
+            <p style="font-weight: bold;color: black;">Critical Care</p>
         </a>
     </div>
 
     <div class="box" data-aos="zoom-in">
         <a href="images/images1.png" title="enough beds">
             <img src="images/images1.png" alt="">
+            <p style="font-weight: bold;color: black;">Critical Care</p>
         </a>
     </div>
 </div>
@@ -165,7 +329,7 @@
 
 
 <!-- review section starts  -->
-<section class="review" id="review">
+<!-- <section class="review" id="review">
 
 <div class="container">
 <h1 class="heading"><span>'</span> People's Review <span>'</span></h1>
@@ -193,7 +357,133 @@
     </div>
 </div>
 </div>
+</section> -->
+
+ <section class="about" id="about">
+<div class="container">
+    <di class="row min-vh-100 align-items-center">
+       
+        <div class="col-md-6 content row column" data-aos="fade-right">
+
+            <div class="box row column">
+                <h3> <i class="fas fa-ambulance"></i> Top-rated Primary Care Doctors </h3>
+                <p>90% of patients gave these primary care doctors 5 stars.</p>
+                <a href="#"><button class="button">See More</button></a>
+            </div>
+
+           /
+       
+            <!-- <div class="box">
+                <h3> <i class="fas fa-stethoscope"></i> free check-ups </h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa, suscipit.</p>
+            </div> -->
+
+        </div>
+
+        <!-- <div class="col-md-6 d-none d-md-block" data-aos="fade-left">
+            <img src="images/images2.jpg" width="100%" alt="">
+        </div>  -->
+         
+        <div class="col-md-6 d-none d-md-block row column " data-aos="fade-left">
+
+        <div class="box row column" data-aos="fade-up">
+            <img src="images/images1.png" alt=""><br/>
+            <h3>DR. Vikash Kumar Mehta</h3><br/>
+            <p>ENT Specialist</p><br/>
+            <span><strong>0.5 kms</strong>from your location</span><br/>
+            <b>Rs. 250/-</b>
+        </div>
+        <div class="box row column" data-aos="fade-up">
+            <img src="images/images1.png" alt="">
+            <h3>DR. Vikash Kumar Mehta</h3><br/>
+            <p>ENT Specialist</p><br/>
+            <span><strong>0.5 kms</strong>from your location</span><br/>
+            <b>Rs. 250/-</b>
+        </div>
+   
+        <!-- <div class="box" data-aos="fade-right"
+            <img src="images/images2.jpg" alt="">
+            <h3>DR. Vikash Kumar Mehta</h3>
+            <p>ENT Specialist</p>
+            <span><strong>0.5 kms</strong>from your location</span><br>
+            <b>Rs. 250/-</b>
+    </div> -->
+   </div>
+    </div>
+</div>
+
+<section class="about" id="about">
+    <div class="container">
+        <di class="row min-vh-100 align-items-center">
+           
+            <div class="col-md-6 content row column" data-aos="fade-right">
+    
+                <div class="box row column">
+                    <h3> <i class="fas fa-ambulance"></i> Top-rated Primary Care Doctors </h3>
+                    <p>90% of patients gave these primary care doctors 5 stars.</p>
+                    <a href="#"><button class="button">See More</button></a>
+                </div>
+    
+               /
+           
+                <!-- <div class="box">
+                    <h3> <i class="fas fa-stethoscope"></i> free check-ups </h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa, suscipit.</p>
+                </div> -->
+    
+            </div>
+    
+            <!-- <div class="col-md-6 d-none d-md-block" data-aos="fade-left">
+                <img src="images/images2.jpg" width="100%" alt="">
+            </div>  -->
+             
+            <div class="col-md-6 d-none d-md-block row column " data-aos="fade-left">
+    
+            <div class="box row column" data-aos="fade-up">
+                <img src="images/images1.png" alt="">
+                <h3>DR. Vikash Kumar Mehta</h3><br>
+                <p>ENT Specialist</p><br>
+                <span><strong>0.5 kms</strong>from your location</span><br>
+                <b>Rs. 250/-</b>
+            </div>
+            <div class="box row column" data-aos="fade-up">
+                <img src="images/images1.png" alt="">
+                <h3>DR. Vikash Kumar Mehta</h3><br/>
+                <p>ENT Specialist</p><br/>
+                <span><strong>0.5 kms</strong>from your location</span><br/>
+                <b>Rs. 250/-</b>
+            </div>
+       
+            <!-- <div class="box" data-aos="fade-right"
+                <img src="images/images2.jpg" alt="">
+                <h3>DR. Vikash Kumar Mehta</h3>
+                <p>ENT Specialist</p>
+                <span><strong>0.5 kms</strong>from your location</span><br>
+                <b>Rs. 250/-</b>
+        </div> -->
+       </div>
+        </div>
+    </div>
+
+<section class="counter" style="background-color: white;">
+    <div class="container">
+        <div class="box-container" style="float: right;">
+
+            <div class="box" data-aos="fade-up">
+                <h2>DR CFO for private practices</h2><br/>
+                <h1><b>Are You A Provider Interested In<br>
+                     Reaching New Patients??</b></h1><br>
+            <ul>
+                    <li><strong>Reach patients in your area looking for a new provider</strong></li><br>
+                    <li><strong>Fill last-minute openings in your schedule</strong></li><br>
+                    <li><strong>Strengthen your online reputation with verified reviews</strong></li><br>
+            </ul><br>
+            <a href="#"><button class="button" style="background-color: blue;color: white;box-sizing: border-box;border: 5px solid white;width: 300px;">List Yourself On DR.CFO</button></a>
+            </div>
+        </div>
+    </div>
 </section>
+</section> 
 <!-- review section ends  -->
 
 
@@ -313,41 +603,51 @@
 
 
 <!-- footer section starts  -->
-<section class="footer">
+<section class="footer" style="background-color: darkblue;color: white;">
 
     <div class="container">
 
         <div class="row">
 
             <div class="col-md-4" data-aos="fade-right">
-                <a href="#" class="logo"><span>H</span>ealth<span>C</span>are.</a>
-                <p>There are a variety of jobs in healthcare, and an increasing need for people to fill these positions. Some are clinical jobs, such as doctors, nurses, and surgeons.
-                    Others are technical jobs, such as phlebotomists and radiologists. A number of positions are healthcare support occupations, which involve helping other clinicians. These include home health aides, occupational therapy assistants, and physical therapy aides.</p>
+                <a href="#" class="logo" style="color: white;"><span>Home</span></a>
+                <a href="#" class="logo" style="color: white;"><span>Contact Us</span></a>
+                <a href="#" class="logo" style="color: white;"><span>About Us</span></a>
+                <a href="#" class="logo" style="color: white;"><span>Privacy Policy</span></a>
+                <a href="#" class="logo" style="color: white;"><span>Become Our Partner</span></a>
+               
             </div>
 
             <div class="col-md-4 text-center" data-aos="fade-up">
-                <h3>links</h3>
-                <a href="#">Home</a>
-                <a href="#">About</a>
-                <a href="#">Facility</a>
-                <a href="#">Review</a>
-                <a href="#">Contact</a>
-                <a href="#">Post</a>
+                <h3>We Are Here</h3>
+                <a href="#">Delhi</a>
+                <a href="#">Gurgram</a>
+                <a href="#">Meerut</a>
+                <a href="#">Ranchi</a>
+                <a href="#">Noida</a>
+                <a href="#">Gaziyabad</a>
+                <a href="#">Patna</a>
+                <a href="#">Indore</a>
+                <a href="#">Noida</a>
             </div>
 
             <div class="col-md-4 text-center" data-aos="fade-left">
-                <h3>share</h3>
-                <a href="#">Facebook</a>
-                <a href="#">Twitter</a>
-                <a href="#">Instagram</a>
-                <a href="#">Github</a>
+                <h3>Top-Searched Specialties</h3>
+                <a href="#">Primary Care Doctor</a>
+                <a href="#">Urgent Care</a>
+                <a href="#">Dermatologist</a>
+                <a href="#">OB-GYN</a>
+                <a href="#">Dentist</a>
+                <a href="#">Psychiatrist</a>
+                <a href="#">Ear,Nose & Throat Doctor</a>
+                <a href="#">Podiatrist</a>
+                <a href="#">Urologist</a>
+               
             </div>
-
         </div>
-
     </div>
 
-    <h1 class="credit text-center mx-auto">CREATED BY <span>HARDIK CHAUDHARY</span> | all rights reserved.</h1>
+    <h1 class="credit text-center mx-auto">All right reserved DR-CFO</h1>
 
 </section>
 <!-- footer section ends -->
